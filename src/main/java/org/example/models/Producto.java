@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
+import java.time.LocalDateTime;
 
 //java persistence
 @Entity
@@ -23,6 +24,7 @@ public final class Producto
    private String nombre;
    private String descripcion;
    private BigDecimal precio;
+   private LocalDateTime fechaIngreso = LocalDateTime.now();
 
    @ManyToOne
    Categoria categoria;
